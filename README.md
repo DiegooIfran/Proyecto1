@@ -1,3 +1,5 @@
+Link al trello: ""
+
 Alentamos al equipo a que utilice el archivo de README en su repositorio para incluír notas de reflexión durante el desarrollo del proyecto. Estas notas pueden incluír:
 
 - Qué desafíos de la entrega fueron los más difíciles
