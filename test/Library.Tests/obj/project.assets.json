@@ -377,6 +377,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.dll": {}
+        }
       }
     }
   },
@@ -970,10 +980,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Library/1.0.0": {
+      "type": "project",
+      "path": "../../src/Library/Library.csproj",
+      "msbuildProject": "../../src/Library/Library.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Library >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 3.14.0",
       "NUnit.Analyzers >= 3.9.0",
@@ -982,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yaned\\.nuget\\packages\\": {}
+    "C:\\Users\\simon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
       "projectName": "Library.Tests",
-      "projectPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
-      "packagesPath": "C:\\Users\\yaned\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\obj\\",
+      "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
+      "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yaned\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1005,18 +1021,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yaned\\Repositorios\\Proyecto1\\src\\Library\\Library.csproj": {}
+    "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yaned\\Repositorios\\Proyecto1\\src\\Library\\Library.csproj": {
+    "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\src\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\yaned\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\src\\Library\\obj\\",
+        "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yaned\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj": {}
+    "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj": {
+    "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
-        "projectName": "Library.Tests",
-        "projectPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
-        "packagesPath": "C:\\Users\\yaned\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yaned\\Repositorios\\Proyecto1\\test\\Library.Tests\\obj\\",
+        "projectUniqueName": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj",
+        "projectName": "Library",
+        "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yaned\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,63 @@
           "warnAsError": [
             "NU1605"
           ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
+        "projectName": "Library.Tests",
+        "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\Library.Tests.csproj",
+        "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\simon\\P2\\Proyecto1\\test\\Library.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
         },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\simon\\P2\\Proyecto1\\src\\Library\\Library.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
