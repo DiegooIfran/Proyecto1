@@ -12,7 +12,8 @@ public class Cliente
     public DateTime FechaNacimiento;
     public List<Etiqueta> Etiquetas = new List<Etiqueta>();
     public List<Interaccion> Interacciones = new List<Interaccion>();
-    public List<Venta> Compras = new List<Compras>();
+    public List<Venta> Compras = new List<Venta>();
+    public List<Cotizacion> Cotizaciones = new List<Cotizacion>();
 
     public Cliente(string nombre, string apellido, string telefono, string email, string genero, DateTime fechaNacimiento)
     {
