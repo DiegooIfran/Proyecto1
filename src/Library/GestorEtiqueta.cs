@@ -9,12 +9,12 @@ public static class GestorEtiquetas
 
     public static void AgregarEtiqueta(Cliente cliente, Etiqueta etiqueta)
     {
-        cliente.Etiquetas.Add(etiqueta);
+        cliente.ObtenerEtiquetas().Add(etiqueta);
     }
     
     public static void BorrarEtiqueta(Cliente cliente, Etiqueta etiqueta)
     {
-        if (cliente.Etiquetas.Contains(etiqueta))
-        {cliente.Etiquetas.Remove(etiqueta);}
+        if (cliente.ObtenerEtiquetas().Contains(etiqueta))
+        {cliente.ObtenerEtiquetas().Remove(etiqueta);}
     }
 }
