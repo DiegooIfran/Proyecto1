@@ -2,7 +2,7 @@ namespace Library;
 
 public class Administrador : Usuario
 {
-    public List<Vendedor> Vendedores { get; set; }
+    private List<Vendedor> Vendedores { get; set; }
     
     public Administrador(string nombre, string apellido, string telefono, string email) 
         : base(nombre, apellido, telefono, email)
@@ -19,7 +19,7 @@ public class Administrador : Usuario
     {
         foreach (Vendedor vendedor in Vendedores)
         {
-            if (vendedor.Email == email)
+            if (vendedor.ObtenerEmail() == email)
             {
                 Vendedores.Remove(vendedor);
             }
@@ -30,10 +30,15 @@ public class Administrador : Usuario
     {
         foreach (Vendedor vendedor in Vendedores)
         {
-            if (vendedor.Email == email)
+            if (vendedor.ObtenerEmail() == email)
             {
                 vendedor.Activo = false;
             }
         } 
+    }
+
+    public List<Vendedor> ObtenerVendedores()
+    {
+        return this.Vendedores;
     }
 }

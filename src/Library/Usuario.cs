@@ -2,10 +2,10 @@ namespace Library;
 
 public abstract class Usuario
 {
-    public string Nombre { get; }
-    public string Apellido { get;}
-    public string Telefono { get; }
-    public string Email { get; }
+    private string Nombre { get; }
+    private string Apellido { get;}
+    private string Telefono { get; }
+    private string Email { get; }
 
     protected Usuario(string nombre, string apellido, string telefono, string email)
     {
@@ -13,5 +13,10 @@ public abstract class Usuario
         this.Apellido = apellido;
         this.Telefono = telefono;
         this.Email = email;
+    }
+
+    public string ObtenerEmail()
+    {
+        return this.Email;
     }
 }
