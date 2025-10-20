@@ -34,7 +34,7 @@ public static class Panel
             int mostradas = 0;
             foreach (var interaccion in todasLasInteracciones)
             {
-                Console.WriteLine($" {interaccion.GetType().Name}: {interaccion.Tema} ({interaccion.Fecha.ToShortDateString()})");
+                Console.WriteLine($" {interaccion.GetType().Name}: {interaccion.Tema} {interaccion.Fecha.ToShortDateString()}");
                 mostradas++;
                 if (mostradas == 5) break; // mostrar solo 5 más recientes
             }
