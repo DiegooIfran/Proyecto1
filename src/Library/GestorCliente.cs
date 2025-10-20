@@ -19,7 +19,7 @@ public class GestorCliente
     {
         foreach (Cliente cliente in TotalClientes)
         {
-            if (cliente.Email == email)
+            if (cliente.ObtenerEmail() == email)
             {
                 this.TotalClientes.Remove(cliente);
             }
