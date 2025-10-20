@@ -23,7 +23,7 @@ public class TestGestorEtiquetas
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         Etiqueta etiqueta = GestorEtiquetas.CrearEtiqueta("Padre", "Este cliente tiene un hijo, le pueden interesar productos para niños chicos.");
         GestorEtiquetas.AgregarEtiqueta(cliente, etiqueta);
-        Assert.That(cliente.Etiquetas, Does.Contain(etiqueta));
+        Assert.That(cliente.ObtenerEtiquetas(), Does.Contain(etiqueta));
     }   
     [Test]
     public void BorrarEtiqueta()
@@ -33,6 +33,6 @@ public class TestGestorEtiquetas
         Etiqueta etiqueta = GestorEtiquetas.CrearEtiqueta("Padre", "Este cliente tiene un hijo, le pueden interesar productos para niños chicos.");
         GestorEtiquetas.AgregarEtiqueta(cliente, etiqueta);
         GestorEtiquetas.BorrarEtiqueta(cliente,etiqueta);
-        Assert.That(cliente.Etiquetas, Does.Not.Contain(etiqueta));
+        Assert.That(cliente.ObtenerEtiquetas(), Does.Not.Contain(etiqueta));
     }   
 }
