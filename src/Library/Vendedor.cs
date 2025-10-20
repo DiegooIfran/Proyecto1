@@ -18,6 +18,11 @@ public class Vendedor : Usuario
     {
         return this.Clientes;
     }
+
+    public void AgregarCliente(Cliente cliente)
+    {
+        this.Clientes.Add(cliente);
+    }
     public void VerClientes()
     {
         foreach (Cliente cliente in Clientes)

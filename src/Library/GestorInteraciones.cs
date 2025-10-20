@@ -25,10 +25,8 @@ public static class GestorInteraciones
 
     public static void UltimasInteracciones()
     {
-        List<Interaccion> interacciones = new List<Interaccion>();
-        interacciones = Vendedor.interacciones;
         int i = 0;
-        foreach (Interaccion interaccion in interacciones)
+        foreach (Interaccion interaccion in )
         {
 
             if (i < 5)

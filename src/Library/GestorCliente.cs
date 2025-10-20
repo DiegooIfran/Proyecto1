@@ -33,6 +33,6 @@ public class GestorCliente
 
     public void AsignarCliente(Vendedor vendedor, Cliente cliente)
     {
-        vendedor.Add(cliente);
+        vendedor.AgregarCliente(cliente);
     }
 }

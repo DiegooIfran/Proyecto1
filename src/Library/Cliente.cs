@@ -84,6 +84,11 @@ public class Cliente
         this.Genero = genero;
     }
 
+    public void AgregarInteraccion(Interaccion interaccion)
+    {
+        this.Interacciones.Add(interaccion);
+    }
+
     public Interaccion UltimaInteraccion()
         //Recorre todas las interacciones del cliente y devuelve la última interacción 
     {
