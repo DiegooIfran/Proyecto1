@@ -12,7 +12,7 @@ public class Administrador : Usuario
     public void CrearVendedor(string nombre, string apellido, string telefono, string email) 
     {
         Vendedor nuevoVendedor = new Vendedor(nombre, apellido, telefono, email);
-        Vendedores.Add(nuevoVendedor); // Como me refiero a un vendedor especifico? Buscando por nombre y apellido? supongo
+        Vendedores.Add(nuevoVendedor); 
     }
 
     public void EliminarVendedor(string email) //Decido usar los Email ya que deberia ser unico

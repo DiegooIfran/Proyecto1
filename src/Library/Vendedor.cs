@@ -14,9 +14,12 @@ public class Vendedor : Usuario
         this.Activo = true;
     }
 
-    public List<Cliente> VerClientes()
+    public void VerClientes()
     {
-        return this.Clientes;
+        foreach (Cliente cliente in Clientes)
+        {
+            Console.WriteLine($"{cliente.ObtenerNombre()} {cliente.ObtenerApellido}");
+        }
     }
 
     public void FestejarCumpleanos()
@@ -25,9 +28,8 @@ public class Vendedor : Usuario
         {
             if (cliente.FechaNacimiento == DateTime.Today)
             {
-                Mensaje mensaje = new Mensaje(DateTime.Today, "Feliz cumpleaños!!",
+                GestorInteraciones.NuevoMensaje(cliente, DateTime.Today, "Feliz cumpleaños!!",
                     "Feliz cumpleaños! ¿Porque no lo festejas con los descuentos especiales que tenemos para vos?", true);
-                NuevoMensaje(cliente);
             }
         }
     }
