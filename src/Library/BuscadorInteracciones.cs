@@ -2,7 +2,7 @@ namespace Library
 {
     public static class BuscadorInteracciones
     {
-        public static List<Correo> VerCorreo(Cliente cliente)
+        public static void VerCorreo(Cliente cliente)
         {
             Console.WriteLine($"Correos del cliente {cliente.ObtenerNombre()}:");
 
@@ -25,7 +25,7 @@ namespace Library
                 Console.WriteLine("No hay correos registrados.\n");
         }
 
-        public static List<Reunion> VerReunion(Cliente cliente)
+        public static void VerReunion(Cliente cliente)
         {
             Console.WriteLine($"Reuniones del cliente {cliente.ObtenerNombre()}:");
 
@@ -48,7 +48,7 @@ namespace Library
                 Console.WriteLine("No hay reuniones registradas.\n");
         }
 
-        public static List<Mensaje> VerMensaje(Cliente cliente)
+        public static void VerMensaje(Cliente cliente)
         {
             Console.WriteLine($"Mensajes del cliente {cliente.ObtenerNombre()}:");
 
@@ -71,7 +71,7 @@ namespace Library
                 Console.WriteLine("No hay mensajes registrados.\n");
         }
 
-        public static List<Llamadas> VerLlamadas(Cliente cliente)
+        public static void VerLlamadas(Cliente cliente)
         {
             Console.WriteLine($"Llamadas del cliente {cliente.ObtenerNombre()}:");
 
