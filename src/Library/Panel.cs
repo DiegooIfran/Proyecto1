@@ -34,7 +34,8 @@ public static class Panel
             int mostradas = 0;
             foreach (var interaccion in todasLasInteracciones)
             {
-                Console.WriteLine($" {interaccion.GetType().Name}: {interaccion.Tema} {interaccion.Fecha.ToShortDateString()}");
+                Console.WriteLine(
+                    $" {interaccion.GetType().Name}: {interaccion.Tema} {interaccion.Fecha.ToShortDateString()}");
                 mostradas++;
                 if (mostradas == 5) break; // mostrar solo 5 más recientes
             }
@@ -46,24 +47,16 @@ public static class Panel
         Console.WriteLine("Próximas reuniones:");
 
         bool hayReuniones = false;
-        DateTime hoy = DateTime.Today;
 
         foreach (var cliente in clientes)
         {
-            var reuniones = BuscadorInteracciones.VerReunion(cliente);
-            foreach (var reunion in reuniones)
-            {
-                if (reunion.Fecha >= hoy)
-                {
-                    Console.WriteLine($" {cliente.Nombre}: {reunion.Tema} el {reunion.Fecha.ToShortDateString()}");
-                    hayReuniones = true;
-                }
-            }
+            BuscadorInteracciones.VerReunion(cliente);
+            hayReuniones = true;
         }
 
         if (!hayReuniones)
         {
-            Console.WriteLine("No hay reuniones próximas.");
+            Console.WriteLine("No hay reuniones próximas");
         }
     }
 }
