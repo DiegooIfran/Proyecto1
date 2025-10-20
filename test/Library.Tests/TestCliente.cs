@@ -31,11 +31,11 @@ public class TestsCliente
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre",
             new DateTime(1990, 10, 20));
         Mensaje mensaje = new Mensaje(new DateTime(2025, 10, 17), "Consulta Disponibilidad",
-            "Esta interesado en la compro de un mueble", false, true);
+            "Esta interesado en la compro de un mueble", false);
         Reunion reunion = new Reunion(new DateTime(2025, 11, 22), "Mostrar productos",
             "Quiere ver la calidad de los muebles");
         Correo correo = new Correo(new DateTime(2024, 9, 29), "Actualización estado de la compra",
-            "El producto fue enviado", true, false);
+            "El producto fue enviado", true);
         Assert.That(cliente.UltimaInteraccion(), Is.EqualTo(mensaje));
     }
 }
