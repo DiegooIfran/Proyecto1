@@ -14,8 +14,8 @@ namespace Library
                 {
                     Console.WriteLine($"Tema: {correo.Tema} | Fecha: {correo.Fecha.ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(correo.Nota))
-                        Console.WriteLine($"  Nota: {correo.Nota}");
+                    if (!string.IsNullOrEmpty(correo.Notas))
+                        Console.WriteLine($"  Nota: {correo.Notas}");
 
                     hayCorreos = true;
                 }
@@ -37,8 +37,8 @@ namespace Library
                 {
                     Console.WriteLine($"Tema: {reunion.Tema} | Fecha: {reunion.Fecha.ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(reunion.Nota))
-                        Console.WriteLine($"  Nota: {reunion.Nota}");
+                    if (!string.IsNullOrEmpty(reunion.Notas))
+                        Console.WriteLine($"  Nota: {reunion.Notas}");
 
                     hayReuniones = true;
                 }
@@ -60,8 +60,8 @@ namespace Library
                 {
                     Console.WriteLine($"Tema: {mensaje.Tema} | Fecha: {mensaje.Fecha.ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(mensaje.Nota))
-                        Console.WriteLine($"  Nota: {mensaje.Nota}");
+                    if (!string.IsNullOrEmpty(mensaje.Notas))
+                        Console.WriteLine($"  Nota: {mensaje.Notas}");
 
                     hayMensajes = true;
                 }
@@ -83,8 +83,8 @@ namespace Library
                 {
                     Console.WriteLine($"Tema: {llamada.Tema} | Fecha: {llamada.Fecha.ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(llamada.Nota))
-                        Console.WriteLine($"  Nota: {llamada.Nota}");
+                    if (!string.IsNullOrEmpty(llamada.Notas))
+                        Console.WriteLine($"  Nota: {llamada.Notas}");
 
                     hayLlamadas = true;
                 }
