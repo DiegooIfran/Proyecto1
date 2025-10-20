@@ -62,6 +62,10 @@ public class Cliente
     {
         return this.Compras;
     }
+    public List<Cotizacion> ObtenerCotizaciones()
+    {
+        return this.Cotizaciones;
+    }
     
     public void CambiarNombre(string nombre)
     {

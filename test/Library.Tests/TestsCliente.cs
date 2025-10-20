@@ -12,16 +12,16 @@ public class TestsCliente
     {
         // Justificación: comprueba que el constructor asigne correctamente el valor de los atributos del cliente y que las listas estén vacías
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        Assert.That(cliente.Nombre, Is.EqualTo("Juan"));
-        Assert.That(cliente.Apellido, Is.EqualTo("Martinez"));
-        Assert.That(cliente.Telefono, Is.EqualTo("091827989"));
-        Assert.That(cliente.Email, Is.EqualTo("hombre"));
-        Assert.That(cliente.Genero, Is.EqualTo("Juan"));
-        Assert.That(cliente.FechaNacimiento, Is.EqualTo(new DateTime(1990,10,20)));
-        Assert.That(cliente.Etiquetas, Is.Empty);
-        Assert.That(cliente.Interacciones, Is.Empty);
-        Assert.That(cliente.Compras, Is.Empty);
-        Assert.That(cliente.Cotizaciones, Is.Empty);
+        Assert.That(cliente.ObtenerNombre(), Is.EqualTo("Juan"));
+        Assert.That(cliente.ObtenerApellido(), Is.EqualTo("Martinez"));
+        Assert.That(cliente.ObtenerTelefono(), Is.EqualTo("091827989"));
+        Assert.That(cliente.ObtenerEmail(), Is.EqualTo("jmartin@gmail.com"));
+        Assert.That(cliente.ObtenerGenero(), Is.EqualTo("hombre"));
+        Assert.That(cliente.ObtenerFechaNacimiento(), Is.EqualTo(new DateTime(1990,10,20)));
+        Assert.That(cliente.ObtenerEtiquetas(), Is.Empty);
+        Assert.That(cliente.ObtenerInteracciones(), Is.Empty);
+        Assert.That(cliente.ObtenerCompras(), Is.Empty);
+        Assert.That(cliente.ObtenerCotizaciones(), Is.Empty);
     }
 
     [Test]
