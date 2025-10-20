@@ -6,11 +6,9 @@ public class Cotizacion
     public int Precio { get; set; }
     public DateTime Fecha { get; set; }
     public string Estado { get; set; }
-    public Cliente Cliente { get; set; }
 
-    public Cotizacion(Cliente cliente, int precio, string producto)
+    public Cotizacion(int precio, string producto)
     {
-        Cliente = cliente;
         Precio = precio;
         Producto = producto;
         Fecha = DateTime.Today;
@@ -20,6 +18,5 @@ public class Cotizacion
     public void CerrarVenta()
     {
         Estado = "Cerrada";
-        
     }
 }
