@@ -5,7 +5,7 @@ namespace Library;
 
 public class Vendedor : Usuario
 {
-    public List<Cliente> Clientes { get; set; }
+    private List<Cliente> Clientes { get; set; }
     public bool Activo { get; set; }
     
     public Vendedor(string nombre, string apellido, string telefono, string email) 
@@ -25,8 +25,9 @@ public class Vendedor : Usuario
         {
             if (cliente.FechaNacimiento == DateTime.Today)
             {
-                // Aca deberia crear un nuevo mensaje y agregarlo en las interacciones del usuario 
-                "Feliz cumpleaños! ¿Porque no lo festejas con los descuentos especiales que tenemos para vos?"
+                Mensaje mensaje = new Mensaje(DateTime.Today, "Feliz cumpleaños!!",
+                    "Feliz cumpleaños! ¿Porque no lo festejas con los descuentos especiales que tenemos para vos?", true);
+                NuevoMensaje(cliente);
             }
         }
     }
