@@ -41,7 +41,7 @@ public static class GestorInteraciones
 
     public static void VerInteracciones(Cliente cliente)
     {
-        foreach (Interaccion interaccion in cliente.Interacciones())
+        foreach (Interaccion interaccion in cliente.ObtenerInteracciones())
         {
             Console.WriteLine($"{interaccion}");
         }
