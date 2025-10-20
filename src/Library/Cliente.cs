@@ -100,5 +100,10 @@ public class Cliente
                 }
             return ultimaInteraccion;
     }
+
+    public void AgregarVenta(Venta venta)
+    {
+        this.Compras.Add(venta);
+    }
 }
 
