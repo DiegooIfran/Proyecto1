@@ -28,13 +28,13 @@ public static class Panel
         else
         {
             // Ordeno por fecha descendente
-            todasLasInteracciones.Sort((a, b) => b.Fecha.CompareTo(a.Fecha));
+            todasLasInteracciones.Sort((a, b) => b.ObtenerFecha().CompareTo(a.ObtenerFecha()));
 
             Console.WriteLine("Interacciones recientes:");
             int mostradas = 0;
             foreach (var interaccion in todasLasInteracciones)
             {
-                Console.WriteLine($" {interaccion.GetType().Name}: {interaccion.Tema} {interaccion.Fecha.ToShortDateString()}");
+                Console.WriteLine($" {interaccion.GetType().Name}: {interaccion.ObtenerTema()} {interaccion.ObtenerFecha().ToShortDateString()}");
                 mostradas++;
                 if (mostradas == 5) break; // mostrar solo 5 más recientes
             }

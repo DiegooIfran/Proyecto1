@@ -28,14 +28,12 @@ public class Cliente
     public Interaccion UltimaInteraccion()
         //Recorre todas las interacciones del cliente y devuelve la última interacción 
     {
-        {
             Interaccion ultimaInteraccion = default;
             foreach (Interaccion interaccion in Interacciones) 
-                if ((ultimaInteraccion.Fecha < interaccion.Fecha) && (interaccion.Fecha<DateTime.Now))
+                if ((ultimaInteraccion.ObtenerFecha() < interaccion.ObtenerFecha()) && (interaccion.ObtenerFecha()<DateTime.Now))
                 {
-                    ultimaInteraccion.Fecha = interaccion.Fecha;
+                    ultimaInteraccion.PonerFecha(interaccion.ObtenerFecha());
                 }
-        }
         return ultimaInteraccion;
     }
 }

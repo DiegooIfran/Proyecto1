@@ -12,10 +12,10 @@ namespace Library
             {
                 if (interaccion is Correo correo)
                 {
-                    Console.WriteLine($"Tema: {correo.Tema} | Fecha: {correo.Fecha.ToShortDateString()}");
+                    Console.WriteLine($"Tema: {correo.ObtenerTema()} | Fecha: {correo.ObtenerFecha().ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(correo.Nota))
-                        Console.WriteLine($"  Nota: {correo.Nota}");
+                    if (!string.IsNullOrEmpty(correo.ObtenerNota()))
+                        Console.WriteLine($"  Nota: {correo.ObtenerNota()}");
 
                     hayCorreos = true;
                 }
@@ -35,10 +35,10 @@ namespace Library
             {
                 if (interaccion is Reunion reunion)
                 {
-                    Console.WriteLine($"Tema: {reunion.Tema} | Fecha: {reunion.Fecha.ToShortDateString()}");
+                    Console.WriteLine($"Tema: {reunion.ObtenerTema()} | Fecha: {reunion.ObtenerFecha().ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(reunion.Nota))
-                        Console.WriteLine($"  Nota: {reunion.Nota}");
+                    if (!string.IsNullOrEmpty(reunion.ObtenerNota()))
+                        Console.WriteLine($"  Nota: {reunion.ObtenerNota()}");
 
                     hayReuniones = true;
                 }
@@ -58,10 +58,10 @@ namespace Library
             {
                 if (interaccion is Mensaje mensaje)
                 {
-                    Console.WriteLine($"Tema: {mensaje.Tema} | Fecha: {mensaje.Fecha.ToShortDateString()}");
+                    Console.WriteLine($"Tema: {mensaje.ObtenerTema()} | Fecha: {mensaje.ObtenerFecha().ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(mensaje.Nota))
-                        Console.WriteLine($"  Nota: {mensaje.Nota}");
+                    if (!string.IsNullOrEmpty(mensaje.ObtenerNota()))
+                        Console.WriteLine($"  Nota: {mensaje.ObtenerNota()}");
 
                     hayMensajes = true;
                 }
@@ -81,10 +81,10 @@ namespace Library
             {
                 if (interaccion is Llamadas llamada)
                 {
-                    Console.WriteLine($"Tema: {llamada.Tema} | Fecha: {llamada.Fecha.ToShortDateString()}");
+                    Console.WriteLine($"Tema: {llamada.ObtenerTema()} | Fecha: {llamada.ObtenerFecha().ToShortDateString()}");
 
-                    if (!string.IsNullOrEmpty(llamada.Nota))
-                        Console.WriteLine($"  Nota: {llamada.Nota}");
+                    if (!string.IsNullOrEmpty(llamada.ObtenerNota()))
+                        Console.WriteLine($"  Nota: {llamada.ObtenerNota()}");
 
                     hayLlamadas = true;
                 }
