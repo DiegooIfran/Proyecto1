@@ -49,8 +49,8 @@ public class Vendedor : Usuario
         {
             if (cliente.ObtenerEtiquetas().IndexOf(etiqueta) != -1)
             {
-                // Aca deberia crear un nuevo mensaje y agregarlo en las interacciones del usuario 
-                // Crear un mensaje con el anuncio de la campaña
+                GestorInteraciones.NuevoMensaje(cliente, DateTime.Today, "Camapaña unica! No te lo pierdas",
+                    anuncio, true);
             }
         }
     }
