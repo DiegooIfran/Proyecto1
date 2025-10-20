@@ -14,6 +14,10 @@ public class Vendedor : Usuario
         this.Activo = true;
     }
 
+    public List<Cliente> ObtenerClientes()
+    {
+        return this.Clientes;
+    }
     public void VerClientes()
     {
         foreach (Cliente cliente in Clientes)
@@ -34,7 +38,7 @@ public class Vendedor : Usuario
         }
     }
 
-    public void Camapana(Etiqueta etiqueta, string anuncio)
+    public void Campana(Etiqueta etiqueta, string anuncio)
     {
         foreach (Cliente cliente in Clientes)
         {

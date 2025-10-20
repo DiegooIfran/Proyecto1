@@ -4,10 +4,10 @@ public static class Panel
 {
     public static void ImprimirPanel(Vendedor vendedor)
     {
-        Console.WriteLine($"Panel del vendedor: {vendedor.ObtenerNombre}");
+        Console.WriteLine($"Panel del vendedor: {vendedor.ObtenerNombre()}");
 
         // total de clientes
-        var clientes = vendedor.VerClientes();
+        var clientes = vendedor.ObtenerClientes();
         Console.WriteLine($"Clientes totales: {clientes.Count}");
 
         //interacciones recientes de todos los clientes
@@ -15,9 +15,9 @@ public static class Panel
 
         foreach (var cliente in clientes)
         {
-            if (cliente.Interacciones != null)
+            if (cliente.ObtenerInteracciones() != null)
             {
-                todasLasInteracciones.AddRange(cliente.Interacciones);
+                todasLasInteracciones.AddRange(cliente.ObtenerInteracciones());
             }
         }
 

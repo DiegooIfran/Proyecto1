@@ -15,6 +15,18 @@ public abstract class Usuario
         this.Email = email;
     }
 
+    public string ObtenerNombre()
+    {
+        return this.Nombre;
+    }
+    public string ObtenerApellido()
+    {
+        return this.Apellido;
+    }
+    public string ObtenerTelefono()
+    {
+        return this.Telefono;
+    }
     public string ObtenerEmail()
     {
         return this.Email;
