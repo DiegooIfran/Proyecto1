@@ -37,7 +37,7 @@ public class Vendedor : Usuario
         {
             if (cliente.ObtenerFechaNacimiento() == DateTime.Today)
             {
-                GestorInteraciones.NuevoMensaje(cliente, DateTime.Today, "Feliz cumpleaños!!",
+                GestorInteracciones.NuevoMensaje(cliente, DateTime.Today, "Feliz cumpleaños!!",
                     "Feliz cumpleaños! ¿Porque no lo festejas con los descuentos especiales que tenemos para vos?", true);
             }
         }
@@ -49,7 +49,7 @@ public class Vendedor : Usuario
         {
             if (cliente.ObtenerEtiquetas().IndexOf(etiqueta) != -1)
             {
-                GestorInteraciones.NuevoMensaje(cliente, DateTime.Today, "Camapaña unica! No te lo pierdas",
+                GestorInteracciones.NuevoMensaje(cliente, DateTime.Today, "Camapaña unica! No te lo pierdas",
                     anuncio, true);
             }
         }

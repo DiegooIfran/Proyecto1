@@ -1,6 +1,6 @@
 namespace Library;
 
-public static class GestorInteraciones
+public static class GestorInteracciones
 {
     private static List<Interaccion> _todasInteracciones = new List<Interaccion>();
     public static void NuevoMensaje(Cliente cliente, DateTime fecha, string tema, string notas, bool enviada)

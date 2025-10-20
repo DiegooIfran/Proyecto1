@@ -12,9 +12,9 @@ public class Online: Interaccion
         Respondidas = false;
     }
 
-    public void Respondida(bool respondo)
+    public void Respondida()
     {
-        this.Respondidas = respondo;
+        this.Respondidas = true;
     }
 
     public bool ObtenerEnviada()

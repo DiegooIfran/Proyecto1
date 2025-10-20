@@ -8,43 +8,74 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void AgregarCliente()
+    public void NuevoMensaje()
     {
-        GestorCliente gestor = new GestorCliente();
-        gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        Assert.That(gestor.VerTotalClientes().Count, Is.EqualTo(1));
-        Assert.That(gestor.VerTotalClientes()[0].ObtenerEmail(), Is.EqualTo("jmartin@gmail.com"));
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        GestorInteracciones.NuevoMensaje(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
+        List<Interaccion> interaccionesCliente = cliente.ObtenerInteracciones();
+        Assert.That(interaccionesCliente.Count, Is.EqualTo(1));
+        Assert.That(interaccionesCliente[0], Is.TypeOf<Mensaje>());
     }
     
     [Test]
-    public void EliminarCliente()
+    public void NuevaLlamada()
     {
-        GestorCliente gestor = new GestorCliente();
-        gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        gestor.AgregarCliente("Lucia", "Dominguez", "091843289", "lucia@gmail.com", "mujer", new DateTime(1997,10,20));
-        gestor.EliminarCliente("lucia@gmail.com");
-        Assert.That(gestor.VerTotalClientes().Count, Is.EqualTo(1));
-        Assert.That(gestor.VerTotalClientes()[0].ObtenerEmail(), Is.EqualTo("diego@gmail.com"));
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        GestorInteracciones.NuevaLlamada(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
+        List<Interaccion> interaccionesCliente = cliente.ObtenerInteracciones();
+        Assert.That(interaccionesCliente.Count, Is.EqualTo(1));
+        Assert.That(interaccionesCliente[0], Is.TypeOf<Llamadas>());
     }
     
     [Test]
-    public void VerTotalClientes()
+    public void NuevoCorreo()
     {
-        GestorCliente gestor = new GestorCliente();
-        gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        gestor.AgregarCliente("Lucia", "Dominguez", "091843289", "lucia@gmail.com", "mujer", new DateTime(1997,10,20));
-        List<Cliente> resultado = gestor.VerTotalClientes();
-        Assert.That(resultado, Has.Count.EqualTo(2));
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        GestorInteracciones.NuevoCorreo(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
+        List<Interaccion> interaccionesCliente = cliente.ObtenerInteracciones();
+        Assert.That(interaccionesCliente.Count, Is.EqualTo(1));
+        Assert.That(interaccionesCliente[0], Is.TypeOf<Correo>());
     }
     
     [Test]
-    public void AsignarCliente_DeberiaAgregarClienteALaListaDelVendedor()
+    public void NuevaReunion()
     {
-        GestorCliente gestor = new GestorCliente();
-        Cliente cliente1 = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
-        Vendedor vendedor = new Vendedor("Lucia", "Dominguez", "093213589", "lucia@gmail.com");
-        gestor.AsignarCliente(vendedor, gestor.VerTotalClientes()[0]);
-        Assert.That(vendedor.ObtenerClientes().Contains(cliente1), Is.True);
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        GestorInteracciones.NuevaReunion(cliente, DateTime.Now, "Tema mensaje", "Notas");
+        List<Interaccion> interaccionesCliente = cliente.ObtenerInteracciones();
+        Assert.That(interaccionesCliente.Count, Is.EqualTo(1));
+        Assert.That(interaccionesCliente[0], Is.TypeOf<Reunion>());
+    }
+    
+    [Test]
+    public void UltimasInteracciones()
+    {
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        for (int i = 0; i < 7; i++)
+        {
+            GestorInteracciones.NuevoMensaje(cliente, DateTime.Now.AddDays(-i), $"Tema {i}", "Notas", true);
+        }
+        var ultimas = GestorInteracciones.UltimasInteracciones();
+        Assert.That(ultimas.Count, Is.EqualTo(5));
+        Assert.That(ultimas[0].Fecha, Is.GreaterThan(ultimas[4].Fecha));
+    }
+
+    [Test]
+    public void InteraccionesPendientes()
+    {
+        Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
+        var msg = new Mensaje(DateTime.Now, "msg", "nota", true);
+        msg.Respondida();
+        var correo = new Correo(DateTime.Now, "correo", "nota", true);
+        cliente.AgregarInteraccion(msg);
+        cliente.AgregarInteraccion(correo);
+        var field = typeof(GestorInteracciones).GetField("_todasInteracciones",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+        var lista = (List<Interaccion>)field.GetValue(null);
+        lista.Add(msg);
+        lista.Add(correo);
+        var pendientes = GestorInteracciones.InteraccionesPendientes();
+        Assert.That(pendientes.Count, Is.EqualTo(1));
+        Assert.That(pendientes[0], Is.TypeOf<Correo>());
     }
 }
