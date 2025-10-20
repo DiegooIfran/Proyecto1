@@ -2,39 +2,38 @@ namespace Library;
 
 public static class GestorInteraciones
 {
+    private static List<Interaccion> _todasInteracciones = new List<Interaccion>();
     public static void NuevoMensaje(Cliente cliente, DateTime fecha, string tema, string notas, bool enviada)
     {
         Mensaje mensaje = new Mensaje(fecha, tema, notas, enviada);
         cliente.AgregarInteraccion(mensaje);
+        _todasInteracciones.Add(mensaje);
     }
     public static void NuevaLlamada(Cliente cliente, DateTime fecha, string tema, string notas, bool enviada)
     {
         Llamadas llamada = new Llamadas(fecha, tema, notas, enviada);
         cliente.AgregarInteraccion(llamada);
+        _todasInteracciones.Add(llamada);
     }
     public static void NuevoCorreo(Cliente cliente, DateTime fecha, string tema, string notas, bool enviada)
     {
         Correo correo = new Correo(fecha, tema, notas, enviada);
         cliente.AgregarInteraccion(correo);
+        _todasInteracciones.Add(correo);
     }
     public static void NuevaReunion(Cliente cliente, DateTime fecha, string tema, string notas)
     {
         Reunion reunion = new Reunion(fecha, tema, notas);
         cliente.AgregarInteraccion(reunion);
+        _todasInteracciones.Add(reunion);
     }
 
-    public static void UltimasInteracciones()
+    public static List<Interaccion> UltimasInteracciones()
     {
-        int i = 0;
-        foreach (Interaccion interaccion in )
-        {
-
-            if (i < 5)
-            {
-                Console.WriteLine($"{interaccion}");
-                i++;
-            }
-        }
+        return _todasInteracciones
+            .OrderByDescending(i => i.Fecha)
+            .Take(5)
+            .ToList();
     }
 
     public static void VerInteracciones(Cliente cliente)
@@ -45,17 +44,11 @@ public static class GestorInteraciones
         }
     }
 
-    public static void InteraccionesPendientes()
+    public static List<Online> InteraccionesPendientes()
     {
-        foreach (Online interaccion in interacciones)
-        {
-            if (interaccion.Respondido())
-            {
-            }
-            else
-            {
-                Console.WriteLine($"{interaccion}");
-            }
-        }
+        return _todasInteracciones
+            .OfType<Online>() // Solo queremos las de tipo Mensaje, Correo, Llamada
+            .Where(ic => ic.ObtenerEnviada() && !ic.ObtenerRespondido()) // Filtra las enviadas pero no respondidas
+            .ToList();
     }
 }

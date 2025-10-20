@@ -17,7 +17,11 @@ public class Online: Interaccion
         this.Respondidas = respondo;
     }
 
-    public bool Respondido()
+    public bool ObtenerEnviada()
+    {
+        return this.Enviada;
+    }
+    public bool ObtenerRespondido()
     {
         return this.Respondidas;
     }

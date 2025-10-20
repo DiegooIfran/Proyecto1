@@ -4,7 +4,7 @@ namespace Library;
 
 public abstract class Interaccion
 {
-    private DateTime Fecha { get; set; }
+    public DateTime Fecha { get; set; }
     private string Tema { get; set; }
     private string Notas { get; set; }
     
@@ -31,6 +31,6 @@ public abstract class Interaccion
 
     public string ObtenerTema()
     {
-        return this.Tema;
-}
+        return this.Tema; 
+    }
 }
