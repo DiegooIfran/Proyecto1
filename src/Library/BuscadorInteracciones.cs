@@ -4,11 +4,11 @@ namespace Library
     {
         public static void VerCorreo(Cliente cliente)
         {
-            Console.WriteLine($"Correos del cliente {cliente.Nombre}:");
+            Console.WriteLine($"Correos del cliente {cliente.ObtenerNombre()}:");
 
             bool hayCorreos = false;
 
-            foreach (var interaccion in cliente.Interacciones)
+            foreach (var interaccion in cliente.ObtenerInteracciones())
             {
                 if (interaccion is Correo correo)
                 {
@@ -27,11 +27,11 @@ namespace Library
 
         public static void VerReunion(Cliente cliente)
         {
-            Console.WriteLine($"Reuniones del cliente {cliente.Nombre}:");
+            Console.WriteLine($"Reuniones del cliente {cliente.ObtenerNombre()}:");
 
             bool hayReuniones = false;
 
-            foreach (var interaccion in cliente.Interacciones)
+            foreach (var interaccion in cliente.ObtenerInteracciones())
             {
                 if (interaccion is Reunion reunion)
                 {
@@ -50,11 +50,11 @@ namespace Library
 
         public static void VerMensaje(Cliente cliente)
         {
-            Console.WriteLine($"Mensajes del cliente {cliente.Nombre}:");
+            Console.WriteLine($"Mensajes del cliente {cliente.ObtenerNombre()}:");
 
             bool hayMensajes = false;
 
-            foreach (var interaccion in cliente.Interacciones)
+            foreach (var interaccion in cliente.ObtenerInteracciones())
             {
                 if (interaccion is Mensaje mensaje)
                 {
@@ -73,11 +73,11 @@ namespace Library
 
         public static void VerLlamadas(Cliente cliente)
         {
-            Console.WriteLine($"Llamadas del cliente {cliente.Nombre}:");
+            Console.WriteLine($"Llamadas del cliente {cliente.ObtenerNombre()}:");
 
             bool hayLlamadas = false;
 
-            foreach (var interaccion in cliente.Interacciones)
+            foreach (var interaccion in cliente.ObtenerInteracciones())
             {
                 if (interaccion is Llamadas llamada)
                 {

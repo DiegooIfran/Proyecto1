@@ -26,7 +26,7 @@ public class Vendedor : Usuario
     {
         foreach (Cliente cliente in Clientes)
         {
-            if (cliente.FechaNacimiento == DateTime.Today)
+            if (cliente.ObtenerFechaNacimiento() == DateTime.Today)
             {
                 GestorInteraciones.NuevoMensaje(cliente, DateTime.Today, "Feliz cumpleaños!!",
                     "Feliz cumpleaños! ¿Porque no lo festejas con los descuentos especiales que tenemos para vos?", true);
@@ -38,7 +38,7 @@ public class Vendedor : Usuario
     {
         foreach (Cliente cliente in Clientes)
         {
-            if (cliente.Etiquetas.IndexOf(etiqueta) != -1)
+            if (cliente.ObtenerEtiquetas().IndexOf(etiqueta) != -1)
             {
                 // Aca deberia crear un nuevo mensaje y agregarlo en las interacciones del usuario 
                 // Crear un mensaje con el anuncio de la campaña
@@ -55,7 +55,7 @@ public class Vendedor : Usuario
     {
         foreach (Cliente cliente in Clientes)
         {
-            foreach (Venta compra in cliente.Compras)
+            foreach (Venta compra in cliente.ObtenerCompras())
             {
                 if (fechaInicio <= compra.Fecha && compra.Fecha <= fechaFinal)
                 {

@@ -53,6 +53,15 @@ public class Cliente
     {
         return this.Etiquetas;
     }
+
+    public List<Interaccion> ObtenerInteracciones()
+    {
+        return this.Interacciones;
+    }
+    public List<Venta> ObtenerCompras()
+    {
+        return this.Compras;
+    }
     
     public void CambiarNombre(string nombre)
     {
