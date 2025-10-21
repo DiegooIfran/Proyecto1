@@ -28,8 +28,8 @@ public class TestBuscadorCliente
         List<Cliente> listaClientes = new List<Cliente>();
         listaClientes.Add(cliente1);
         listaClientes.Add(cliente2);
-        Assert.That(BuscadorCliente.BuscarPorNombre("Martinez",listaClientes), Is.EqualTo(cliente1));
-        Assert.That(BuscadorCliente.BuscarPorNombre("Romero",listaClientes), Is.EqualTo(cliente2));
+        Assert.That(BuscadorCliente.BuscarPorApellido("Martinez",listaClientes), Is.EqualTo(cliente1));
+        Assert.That(BuscadorCliente.BuscarPorApellido("Romero",listaClientes), Is.EqualTo(cliente2));
     }
     [Test]
     public void TestBuscarPorTelefono()
@@ -52,7 +52,7 @@ public class TestBuscadorCliente
         List<Cliente> listaClientes = new List<Cliente>();
         listaClientes.Add(cliente1);
         listaClientes.Add(cliente2);
-        Assert.That(BuscadorCliente.BuscarPorEmail("jmartin@gmail.co",listaClientes), Is.EqualTo(cliente1));
+        Assert.That(BuscadorCliente.BuscarPorEmail("jmartin@gmail.com",listaClientes), Is.EqualTo(cliente1));
         Assert.That(BuscadorCliente.BuscarPorEmail("anaromeroo@gmail.com",listaClientes), Is.EqualTo(cliente2));
     }
 }

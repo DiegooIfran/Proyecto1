@@ -17,7 +17,7 @@ public static class BuscadorCliente
     {
         foreach (Cliente cliente in clientes)
         {
-            if (apellido == cliente.ObtenerNombre())
+            if (apellido == cliente.ObtenerApellido())
             {
                 return cliente;
             }
@@ -28,7 +28,7 @@ public static class BuscadorCliente
     {
         foreach (Cliente cliente in clientes)
         {
-            if (telefono == cliente.ObtenerNombre())
+            if (telefono == cliente.ObtenerTelefono())
             {
                 return cliente;
             }
@@ -39,7 +39,7 @@ public static class BuscadorCliente
     {
         foreach (Cliente cliente in clientes)
         {
-            if (email == cliente.ObtenerNombre())
+            if (email == cliente.ObtenerEmail())
             {
                 return cliente;
             }

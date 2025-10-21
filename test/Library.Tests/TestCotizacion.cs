@@ -53,7 +53,6 @@ namespace Library.Tests
 
             // Act
             cotizacion.CerrarVenta();
-            cotizacion.CerrarVenta(); 
 
             // Assert
             Assert.That(cotizacion.Estado, Is.EqualTo("Cerrada"));

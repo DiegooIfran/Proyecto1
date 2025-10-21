@@ -30,12 +30,12 @@ public class TestsCliente
         // Justificación: comprueba que el método ÚltimaInterración devuelva la última interración que realizó el cliente
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre",
             new DateTime(1990, 10, 20));
-        Mensaje mensaje = new Mensaje(new DateTime(2025, 10, 17), "Consulta Disponibilidad",
+        GestorInteracciones.NuevoMensaje(cliente, new DateTime(2025, 10, 17), "Consulta Disponibilidad",
             "Esta interesado en la compro de un mueble", false);
-        Reunion reunion = new Reunion(new DateTime(2025, 11, 22), "Mostrar productos",
+        GestorInteracciones.NuevoMensaje(cliente,new DateTime(2024, 9, 29), "Actualización estado de la compra",
+           "El producto fue enviado", true);
+        GestorInteracciones.NuevaReunion(cliente,new DateTime(2025, 11, 22), "Mostrar productos",
             "Quiere ver la calidad de los muebles");
-        Correo correo = new Correo(new DateTime(2024, 9, 29), "Actualización estado de la compra",
-            "El producto fue enviado", true);
-        Assert.That(cliente.UltimaInteraccion(), Is.EqualTo(mensaje));
+        Assert.That(cliente.UltimaInteraccion(), Is.EqualTo(cliente.ObtenerInteracciones()[0]));
     }
 }

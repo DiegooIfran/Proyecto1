@@ -17,7 +17,7 @@ public class GestorCliente
 
     public void EliminarCliente(string email)
     {
-        foreach (Cliente cliente in TotalClientes)
+        foreach (Cliente cliente in this.TotalClientes.ToList())
         {
             if (cliente.ObtenerEmail() == email)
             {
