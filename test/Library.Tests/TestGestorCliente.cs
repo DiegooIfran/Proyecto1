@@ -8,7 +8,7 @@ public class TestGestorCliente
     }
     
     [Test]
-    public void AgregarCliente()
+    public void AgregarCliente() //Chequea que se agregue un cliente
     {
         GestorCliente gestor = new GestorCliente();
         gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
@@ -17,7 +17,7 @@ public class TestGestorCliente
     }
     
     [Test]
-    public void EliminarCliente()
+    public void EliminarCliente() //Chequea que se elimine un cliente
     {
         GestorCliente gestor = new GestorCliente();
         gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
@@ -28,7 +28,7 @@ public class TestGestorCliente
     }
     
     [Test]
-    public void VerTotalClientes()
+    public void VerTotalClientes() //Chequea que se incrementa el total de clientes
     {
         GestorCliente gestor = new GestorCliente();
         gestor.AgregarCliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
@@ -38,7 +38,7 @@ public class TestGestorCliente
     }
     
     [Test]
-    public void AsignarCliente_DeberiaAgregarClienteALaListaDelVendedor()
+    public void AsignarCliente() //Chequea que funcione la asignacion de cliente a otro vendedor
     {
         GestorCliente gestor = new GestorCliente();
         Cliente cliente1 = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));

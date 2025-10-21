@@ -8,7 +8,7 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void NuevoMensaje()
+    public void NuevoMensaje() //Chequea que funcione la funcion NuevoMensaje
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         GestorInteracciones.NuevoMensaje(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
@@ -18,7 +18,7 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void NuevaLlamada()
+    public void NuevaLlamada() //Chequea que funcione la funcion NuevaLlamada
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         GestorInteracciones.NuevaLlamada(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
@@ -28,7 +28,7 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void NuevoCorreo()
+    public void NuevoCorreo() //Chequea que funcione la funcion NuevoCorreo
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         GestorInteracciones.NuevoCorreo(cliente, DateTime.Now, "Tema mensaje", "Notas", true);
@@ -38,7 +38,7 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void NuevaReunion()
+    public void NuevaReunion() //Chequea que funcione la funcion NuevaReunion
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         GestorInteracciones.NuevaReunion(cliente, DateTime.Now, "Tema mensaje", "Notas");
@@ -48,7 +48,7 @@ public class TestGestorInteracciones
     }
     
     [Test]
-    public void UltimasInteracciones()
+    public void UltimasInteracciones() //Chequea que funcione la funcion UltimasInteracciones
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         for (int i = 0; i < 7; i++)
@@ -61,7 +61,7 @@ public class TestGestorInteracciones
     }
 
     [Test]
-    public void InteraccionesPendientes()
+    public void InteraccionesPendientes() //Chequea que funcione la funcion InteraccionesPendientes
     {
         Cliente cliente = new Cliente("Juan", "Martinez", "091827989", "jmartin@gmail.com", "hombre", new DateTime(1990,10,20));
         var msg = new Mensaje(DateTime.Now, "msg", "nota", true);

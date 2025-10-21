@@ -8,7 +8,7 @@ public class TestInteraccion
     }
 
     [Test]
-    public void TestConstructorCorreo()
+    public void TestConstructorCorreo() //Chequea que funcione el constructor de la interaccion correo
     {
         var fechaPrueba = new DateTime(2025, 10, 20, 10, 30, 0);
         const string temaPrueba = "Consulta de Producto X";
@@ -23,7 +23,7 @@ public class TestInteraccion
     }
 
     [Test]
-    public void TestConstructorLlamadas()
+    public void TestConstructorLlamadas() //Chequea que funcione el constructor de la interaccion llamada
     {
         var fechaPrueba = new DateTime(2025, 10, 20, 10, 30, 0);
         const string temaPrueba = "Consulta de Producto X";
@@ -38,7 +38,7 @@ public class TestInteraccion
     }
     
     [Test]
-    public void TestConstructorMensaje()
+    public void TestConstructorMensaje() //Chequea que funcione el constructor de la interaccion mensaje
     {
         var fechaPrueba = new DateTime(2025, 10, 20, 10, 30, 0);
         const string temaPrueba = "Consulta de Producto X";
@@ -53,7 +53,7 @@ public class TestInteraccion
     }
     
     [Test]
-    public void TestConstructorReunion()
+    public void TestConstructorReunion() //Chequea que funcione el constructor de la interaccion reunion
     {
         var fechaPrueba = new DateTime(2025, 10, 20, 10, 30, 0);
         const string temaPrueba = "Consulta de Producto X";
