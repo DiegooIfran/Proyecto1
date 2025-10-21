@@ -34,6 +34,6 @@ public class TestAdministrador
         admin.CrearVendedor("Federico", "Garcia", "231231", "fedegarcia@gmail.com");
         admin.EliminarVendedor("fedegarcia@gmail.com");
         
-        Assert.AreEqual(1, admin.ObtenerVendedores().Count);
+        Assert.AreEqual(0, admin.ObtenerVendedores().Count);
     }
 }

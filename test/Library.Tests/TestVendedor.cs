@@ -67,7 +67,7 @@ public class TestVendedor
         cliente.ObtenerCotizaciones()[1].CerrarVenta();
         cliente.ObtenerCotizaciones()[2].CerrarVenta();
         
-        Assert.That(cliente.ObtenerCotizaciones().Count, Is.EqualTo(1));
+        Assert.That(cliente.ObtenerCompras().Count, Is.EqualTo(3));
     }
 
 }

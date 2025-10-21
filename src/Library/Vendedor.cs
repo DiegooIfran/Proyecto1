@@ -12,6 +12,7 @@ public class Vendedor : Usuario
         : base(nombre, apellido, telefono, email)
     {
         this.Activo = true;
+        this.Clientes = new List<Cliente>();
     }
 
     public List<Cliente> ObtenerClientes()
@@ -58,6 +59,7 @@ public class Vendedor : Usuario
     public void NuevaCotizacion(Cliente cliente, int precio, string producto)
     {
         Cotizacion nuevaCotizacion = new(cliente, precio, producto);
+        cliente.AgregarCotizacion(nuevaCotizacion);
     }
 
     public void TotalVentas(DateTime fechaInicio, DateTime fechaFinal)

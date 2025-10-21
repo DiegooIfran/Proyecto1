@@ -7,6 +7,7 @@ public class Administrador : Usuario
     public Administrador(string nombre, string apellido, string telefono, string email) 
         : base(nombre, apellido, telefono, email)
     {
+        this.Vendedores = new List<Vendedor>();
     }
     
     public void CrearVendedor(string nombre, string apellido, string telefono, string email) 
@@ -17,13 +18,7 @@ public class Administrador : Usuario
 
     public void EliminarVendedor(string email) //Decido usar los Email ya que deberia ser unico
     {
-        foreach (Vendedor vendedor in Vendedores)
-        {
-            if (vendedor.ObtenerEmail() == email)
-            {
-                Vendedores.Remove(vendedor);
-            }
-        }
+        Vendedores.RemoveAll(v => v.ObtenerEmail() == email);
     }
 
     public void SuspenderVendedor(string email)

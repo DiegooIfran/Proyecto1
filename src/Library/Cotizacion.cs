@@ -21,6 +21,6 @@ public class Cotizacion
     {
         Estado = "Cerrada";
         Venta nuevaVenta = new Venta(this.Producto, this.Precio);
-        this.Cliente.AgregarVenta(nuevaVenta);
+        this.Cliente.AgregarVenta(nuevaVenta); 
     }
 }

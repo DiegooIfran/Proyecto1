@@ -109,5 +109,10 @@ public class Cliente
     {
         this.Compras.Add(venta);
     }
+    public void AgregarCotizacion(Cotizacion cotizacion)
+    {
+        this.Cotizaciones.Add(cotizacion);
+    }
+    
 }
 
