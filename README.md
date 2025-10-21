@@ -13,7 +13,7 @@ En un principio esto parecía una tarea sencilla pero en el proceso nos surgiero
 
 Una herramienta fundamental que tuvimos que poner en práctica en esta primera entrega fue la de dividir un problema grande y complejo en muchos problemas sencillos y fáciles de abordar. Además, tuvimos que estar en constante 
 comunicación entre nosotros para evitar conflictos cuando hacíamos los merge y así respetar el trabajo del otro. Otra habilidad importante fue la organización, compromiso y responsabilidad de cada miembro,
-pues muchas de las tareas dependía directamente del trabajo de los demás.
+pues muchas de las tareas dependía directamente del trabajo de los demás, una de las herramientas que nos facilito mucho este proceso fue el uso de Trello.
 
 ### Qué recursos (páginas web, libros, foros, etc) encontraron que les fueron valiosos para sortear los desafíos que encontraron
 
